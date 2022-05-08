@@ -27,6 +27,8 @@
 #define LU_Y        Z                  // Y
 #define LU_Z        Y                  // Z
 
+#define LU_EURO     RA(LU_E)
+
 // For the scan codes look at 
 // http://kbdlayout.info/kbdus/overview+scancodes
 
@@ -57,19 +59,19 @@
 #define LU_RCBR     RA(LU_DLR)     	// }
 
 // Scancode 1A
-#define LU_EE	    LEFT_BRACKET    // è
+#define LU_EG	    LEFT_BRACKET    // è
 #define LU_UT       LS(LU_EE)     	// ü
 #define LU_LBRT     RA(LU_EE)     	// [
 
 // Scancode 1B
-#define LU_TREMA    RIGHT_BRACKET    // è
-#define LU_EXCL     LS(LU_TREMA)     // ü
-#define LU_RBRT     RA(LU_TREMA)     // [
+#define LU_TREMA    RIGHT_BRACKET    // ¨
+#define LU_EXCL     LS(LU_TREMA)     // !
+#define LU_RBRT     RA(LU_TREMA)     // ]
 
 // Scancode 56
-#define LU_LT        BACKSLASH    // è
-#define LU_GT        LS(LU_LT)     // ü
-#define LU_BACKSLASH RA(LU_LT)     // [
+#define LU_LT        BACKSLASH     // <
+#define LU_GT        LS(LU_LT)     // >
+#define LU_BACKSLASH RA(LU_LT)     // \
 
 // Scancode 29
 #define LU_PARAGRAPHE GRAVE             // §
@@ -122,7 +124,7 @@
 #define LU_EQ         LS(LU_N0)   // 0
 
 // Scancode 0C
-#define LU_APOSTROPHE MINUS             // '
+#define LU_SQUOTE     MINUS             // '
 #define LU_QUESTION   LS(LU_APOSTROPHE) // ?
 #define LU_ACUTE      RA(LU_APOSTROPHE) // ´
 
