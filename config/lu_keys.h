@@ -51,7 +51,7 @@
 
 // Scancode 28
 #define LU_AG       SINGLE_QUOTE    // à
-#define LU_AT 		LS(LU_AG)       // ä
+#define LU_A_UM  	LS(LU_AG)       // ä
 #define LU_LCBR     RA(LU_AG)       // {
 
 // Scancode 2B
