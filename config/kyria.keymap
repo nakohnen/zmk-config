@@ -18,85 +18,61 @@
 #define NBR      2
 #define FUNC     3
 #define FUNC_MOD 4
-// #define EMPTY 5
-
 
 / {
-
-conditional_layers {
-    compatible = "zmk,conditional-layers";
-    combo_func_mod_layer {
-        if-layers = <1 3>;
-        then-layer = <4>;
-    };
-};
+	conditional_layers {
+	    compatible = "zmk,conditional-layers";
+	    combo_func_mod_layer {
+	        if-layers = <1 3>;
+	        then-layer = <4>;
+	    };
+	};
 	keymap {
 		compatible = "zmk,keymap";
 		
 		default_layer {
-// ----------------------------------------------------------------------------------------------------------------------------------
-// |  ESC  |  M  |  L  |  C   |  P   |  B   |                                     |  è   |  Q     |  é    |  Y   |   H   | BSPC  |
-// |  TAB  |  R  |  N  |  S   |  T   |  D   |                                     |  O   |  A     |  E    |  I   |   U   | DEL   |
-// | CTRL  |  X  |  W  |  F   |  G   |  V   | CTRL_X  | CTRL_V |  | POS_1 | END   |  Z   |  .     |  à    |  J   |   K   | ENTER |
-//                     | GUI  | ALT  | NBR  | LSHIFT  | FUNC   |  | ENTER | SPACE | MOD  | ALTRGR | CTRL  |
-
 			bindings = <
-	&kp ESC   &kp LU_M &kp LU_L &kp LU_C &kp LU_P &kp LU_B                                                         &kp LU_EG &kp LU_Q   &kp LU_EA &kp LU_Y &kp LU_H &kp BSPC
-	&kp TAB   &kp LU_R &kp LU_N &kp LU_S &kp LU_T &kp LU_D                                                         &kp LU_O  &kp LU_A   &kp LU_E  &kp LU_I &kp LU_U &kp DEL
-	&kp LCTRL &kp LU_X &kp LU_W &kp LU_F &kp LU_G &kp LU_V &none     &none                     &kp HOME  &kp END   &kp LU_Z  &kp LU_DOT &kp LU_AG &kp LU_J &kp LU_K &kp RET
-	                            &kp LGUI &kp LALT &mo NBR  &kp LSHFT &mo FUNC                  &kp ENTER &kp SPACE &mo MOD   &kp RALT   &kp RCTRL
+	&kp ESC   &kp LU_M &kp LU_L &kp LU_C &kp LU_P &kp LU_B                                        &kp LU_EG &kp LU_Q   &kp LU_EA &kp LU_Y &kp LU_H &kp BSPC
+	&kp TAB   &kp LU_R &kp LU_N &kp LU_S &kp LU_T &kp LU_D                                        &kp LU_O  &kp LU_A   &kp LU_E  &kp LU_I &kp LU_U &kp DEL
+	&kp LCTRL &kp LU_X &kp LU_W &kp LU_F &kp LU_G &kp LU_V &none     &none    &kp HOME  &kp END   &kp LU_Z  &kp LU_DOT &kp LU_AG &kp LU_J &kp LU_K &kp RET
+	                            &kp LGUI &kp LALT &mo NBR  &kp LSHFT &mo FUNC &kp ENTER &kp SPACE &mo MOD   &kp RALT   &kp RCTRL
 			>;
 			
 		};
-
 		mod_layer {
 			bindings = <
-	&kp LU_DEGREE &kp LU_DLR     &kp LU_LCBR &kp LU_RCBR   &kp LU_LPAR  &kp LU_RPAR                                          &kp LU_SLASH    &kp LU_LT    &kp LU_GT    &kp LU_EQ    &kp LU_TILDE     &kp LU_ACUTE    
-	&kp LU_POUND  &kp LU_PERCENT &kp LU_AT   &kp LU_DQUOTE &kp LU_HASH  &kp LU_SQUOTE                                        &kp LU_EXCL     &kp LU_COMM  &kp LU_PLUS  &kp LU_MINS  &kp LU_ASTERISK  &kp LU_GRAVE
-	&kp LU_TREMA  &kp LU_EURO    &kp LU_PIPE &kp LU_CC     &kp LU_LBRT  &kp LU_RBRT   &trans &trans            &trans &trans &kp LU_QUESTION &kp LU_COLON &kp LU_SEMI  &kp LU_UNDER &kp LU_BACKSLASH &kp LU_CIRCUM
-	                                         &trans        &trans       &trans        &trans &trans            &trans &trans &trans          &trans       &trans
+	&kp LU_DEGREE &kp LU_DLR     &kp LU_LCBR &kp LU_RCBR   &kp LU_LPAR  &kp LU_RPAR                               &kp LU_SLASH    &kp LU_LT    &kp LU_GT    &kp LU_EQ    &kp LU_TILDE     &kp LU_ACUTE    
+	&kp LU_POUND  &kp LU_PERCENT &kp LU_AT   &kp LU_DQUOTE &kp LU_HASH  &kp LU_SQUOTE                             &kp LU_EXCL     &kp LU_COMM  &kp LU_PLUS  &kp LU_MINS  &kp LU_ASTERISK  &kp LU_GRAVE
+	&kp LU_TREMA  &kp LU_EURO    &kp LU_PIPE &kp LU_CC     &kp LU_LBRT  &kp LU_RBRT   &trans &trans &trans &trans &kp LU_QUESTION &kp LU_COLON &kp LU_SEMI  &kp LU_UNDER &kp LU_BACKSLASH &kp LU_CIRCUM
+	                                         &trans        &trans       &trans        &trans &trans &trans &trans &trans          &trans       &trans
 			>;
 			
 		};
-
 		nbr_layer {
 			bindings = <
-	&none  &kp LU_N1 &kp LU_N2 &kp LU_N3  &kp LU_N4  &kp LU_N5                                     &kp LU_N6 &kp LU_N7 &kp LU_N8 &kp LU_N9  &kp LU_N0       &kp LU_MINS    
-	&none  &none     &none     &none      &none      &none                                         &none     &kp LU_N4 &kp LU_N5 &kp LU_N6  &kp LU_SLASH    &kp LU_PLUS
-	&none  &none     &none     &none      &none      &none     &none &none          &none  &none   &none     &kp LU_N1 &kp LU_N2 &kp LU_N3  &kp LU_ASTERISK &kp RET
-	                           &none      &none      &trans    &none &none          &none  &none   &none     &kp LU_N0 &kp LU_DOT
+	&none  &kp LU_N1 &kp LU_N2 &kp LU_N3  &kp LU_N4  &kp LU_N5                            &kp LU_N6 &kp LU_N7 &kp LU_N8 &kp LU_N9  &kp LU_N0       &kp LU_MINS    
+	&none  &none     &none     &none      &none      &none                                &none     &kp LU_N4 &kp LU_N5 &kp LU_N6  &kp LU_SLASH    &kp LU_PLUS
+	&none  &none     &none     &none      &none      &none     &none &none &none  &none   &none     &kp LU_N1 &kp LU_N2 &kp LU_N3  &kp LU_ASTERISK &kp RET
+	                           &none      &none      &trans    &none &none &none  &none   &none     &kp LU_N0 &kp LU_DOT
     			>;
 			
 		};
-
 		func_layer {
 			bindings = <
-	&none  &kp F1 &kp F2  &kp F3   &kp F4  &none                                       &kp PG_UP &kp HOME &kp UP   &kp END   &none &kp C_PREVIOUS    
-	&none  &kp F5 &kp F6  &kp F7   &kp F8  &none                                       &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &none &kp C_NEXT
-	&none  &kp F9 &kp F10 &kp F11  &kp F12 &none  &none &none              &none &none &none     &none    &none    &none     &none &kp C_PLAY_PAUSE
-	                      &none    &none   &none  &none &trans             &none &none &trans    &none    &none
+	&none  &kp F1 &kp F2  &kp F3   &kp F4  &none                           &kp PG_UP &kp HOME &kp UP   &kp END   &none &kp C_PREVIOUS    
+	&none  &kp F5 &kp F6  &kp F7   &kp F8  &none                           &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &none &kp C_NEXT
+	&none  &kp F9 &kp F10 &kp F11  &kp F12 &none  &none &none  &none &none &none     &none    &none    &none     &none &kp C_PLAY_PAUSE
+	                      &none    &none   &none  &none &trans &none &none &trans    &none    &none
 			>;
 			
 		};
-
 		func_mod_layer {
 			bindings = <
-	&none  &kp F13 &kp F14 &kp F15  &kp F16                                            &none  &none  &none  &none &none &kp C_VOLUME_UP      
-	&none  &kp F17 &kp F18 &kp F19  &kp F20                                            &none  &none  &none  &none &none &kp C_VOLUME_DOWN
-	&none  &kp F21 &kp F22 &kp F23  &kp F24 &none &none                    &none &none &none  &none  &none  &none &none &kp C_MUTE
-	                   &none  &none  &none  &none &trans                   &none &none &trans &none &none
+	&none  &kp F13 &kp F14 &kp F15  &kp F16                          &none  &none  &none  &none &none &kp C_VOLUME_UP      
+	&none  &kp F17 &kp F18 &kp F19  &kp F20                          &none  &none  &none  &none &none &kp C_VOLUME_DOWN
+	&none  &kp F21 &kp F22 &kp F23  &kp F24 &none &none  &none &none &none  &none  &none  &none &none &kp C_MUTE
+	                   &none  &none  &none  &none &trans &none &none &trans &none &none
 			>;
-			
 		};
-
-//		empty_layer {
-//			bindings = <
-//	&none  &none &none &none  &none  &none                                       &none  &none  &none  &none &none &none    
-//	&none  &none &none &none  &none  &none                                       &none  &none  &none  &none &none &none
-//	&none  &none &none &none  &none  &none  &trans &trans          &trans &trans &none  &none  &none  &none &none &none
-//	                   &trans &trans &trans &trans &trans          &trans &trans &trans &trans &trans
-//			>;
-//			
-//		};
 	};
 };
