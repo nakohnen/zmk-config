@@ -46,8 +46,8 @@
 #define LU_UNDER	LS(LU_MINS)	    // _
 
 // Scancode 27
-#define LU_EE       SEMICOLON       // é
-#define LU_OT 		LS(LU_EE)       // ö
+#define LU_EA       SEMICOLON       // é
+#define LU_OT 		LS(LU_EA)       // ö
 
 // Scancode 28
 #define LU_AG       SINGLE_QUOTE    // à
@@ -61,8 +61,8 @@
 
 // Scancode 1A
 #define LU_EG	    LEFT_BRACKET    // è
-#define LU_UT       LS(LU_EE)     	// ü
-#define LU_LBRT     RA(LU_EE)     	// [
+#define LU_UT       LS(LU_EG)     	// ü
+#define LU_LBRT     RA(LU_EG)     	// [
 
 // Scancode 1B
 #define LU_TREMA    RIGHT_BRACKET    // ¨
