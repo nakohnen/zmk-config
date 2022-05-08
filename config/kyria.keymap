@@ -27,6 +27,72 @@
 	        then-layer = <4>;
 	    };
 	};
+
+
+    macros {
+        ctrl_c: ctrl_c {
+            label = "M_CTRLC";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp LU_C>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        ctrl_v: ctrl_v {
+            label = "M_CTRLV";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp LU_V>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        ctrl_x: ctrl_x {
+            label = "M_CTRLX";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp LU_X>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        ctrl_b: ctrl_b {
+            label = "M_CTRLB";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp LU_B>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+		ctrl_z: ctrl_z {
+            label = "M_CTRLZ";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp LU_Z>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        ctrl_y: ctrl_y {
+            label = "M_CTRLY";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp LU_Y>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+    };
+
+
 	keymap {
 		compatible = "zmk,keymap";
 		
@@ -34,7 +100,7 @@
 			bindings = <
 	&kp ESC   &kp LU_M &kp LU_L &kp LU_C &kp LU_P &kp LU_B                                        &kp LU_EG &kp LU_Q   &kp LU_EA &kp LU_Y &kp LU_H &kp BSPC
 	&kp TAB   &kp LU_R &kp LU_N &kp LU_S &kp LU_T &kp LU_D                                        &kp LU_O  &kp LU_A   &kp LU_E  &kp LU_I &kp LU_U &kp DEL
-	&kp LCTRL &kp LU_X &kp LU_W &kp LU_F &kp LU_G &kp LU_V &none     &none    &kp HOME  &kp END   &kp LU_Z  &kp LU_DOT &kp LU_AG &kp LU_J &kp LU_K &kp RET
+	&kp LCTRL &kp LU_X &kp LU_W &kp LU_F &kp LU_G &kp LU_V &ctrl_c   &ctrl_v  &kp HOME  &kp END   &kp LU_Z  &kp LU_DOT &kp LU_AG &kp LU_J &kp LU_K &kp RET
 	                            &kp LGUI &kp LALT &mo NBR  &kp LSHFT &mo FUNC &kp ENTER &kp SPACE &mo MOD   &kp RALT   &kp RCTRL
 			>;
 			
@@ -59,10 +125,10 @@
 		};
 		func_layer {
 			bindings = <
-	&none  &kp F1 &kp F2  &kp F3   &kp F4  &none                           &kp PG_UP &kp HOME &kp UP   &kp END   &none &kp C_PREVIOUS    
-	&none  &kp F5 &kp F6  &kp F7   &kp F8  &none                           &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &none &kp C_NEXT
-	&none  &kp F9 &kp F10 &kp F11  &kp F12 &none  &none &none  &none &none &none     &none    &none    &none     &none &kp C_PLAY_PAUSE
-	                      &none    &none   &none  &none &trans &none &none &trans    &none    &none
+	&kp ESC   &kp F1 &kp F2  &kp F3   &kp F4   &none                                     &kp PG_UP &kp HOME &kp UP   &kp END   &none &kp C_PREVIOUS    
+	&kp TAB   &kp F5 &kp F6  &kp F7   &kp F8   &none                                     &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &none &kp C_NEXT
+	&kp LCTRL &kp F9 &kp F10 &kp F11  &kp F12  &none &ctrl_x   &ctrl_b   &ctrl_z &ctrl_y &none     &none    &none    &none     &none &kp C_PLAY_PAUSE
+	                         &kp LGUI &kp LALT &none &kp LSHFT &mo FUNC  &none   &none   &mo MOD   &kp RALT &kp RCTRL
 			>;
 			
 		};
