@@ -1,4 +1,5 @@
 // Source: https://github.com/nakohnen/zmk-config/blob/master/config/lu-keys.h
+// Based on the swiss french keyboard layout: http://kbdlayout.info/kbdsf
 
 #define LU_A        A                  // A
 #define LU_B        B                  // B
