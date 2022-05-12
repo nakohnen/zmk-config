@@ -101,7 +101,7 @@
 	&kp ESC   &kp LU_M &kp LU_L &kp LU_C &kp LU_P &kp LU_B                                        &kp LU_EG &kp LU_Q   &kp LU_EA &kp LU_Y &kp LU_H &kp BSPC
 	&kp TAB   &kp LU_R &kp LU_N &kp LU_S &kp LU_T &kp LU_D                                        &kp LU_O  &kp LU_A   &kp LU_E  &kp LU_I &kp LU_U &kp DEL
 	&kp LCTRL &kp LU_X &kp LU_W &kp LU_F &kp LU_G &kp LU_V &ctrl_c   &ctrl_v  &kp HOME  &kp END   &kp LU_Z  &kp LU_DOT &kp LU_AG &kp LU_J &kp LU_K &kp RET
-	                            &kp LGUI &kp LALT &mo NBR  &kp LSHFT &mo FUNC &kp ENTER &kp SPACE &mo MOD   &kp RALT   &kp RCTRL
+	                            &kp LGUI &kp LALT &mo FUNC &kp LSHFT &mo NBR  &kp ENTER &kp SPACE &mo MOD   &kp RALT   &kp RCTRL
 			>;
 			
 		};
@@ -122,22 +122,22 @@
 	                           &none      &none      &trans    &none &none &none  &none   &none     &kp LU_N0 &kp LU_DOT
     			>;
 			
-		};
+		};>
 		func_layer {
 			bindings = <
-	&kp ESC   &kp F1 &kp F2  &kp F3   &kp F4   &none                                     &kp PG_UP &kp HOME &kp UP   &kp END   &none &kp C_PREVIOUS    
-	&kp TAB   &kp F5 &kp F6  &kp F7   &kp F8   &none                                     &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &none &kp C_NEXT
-	&kp LCTRL &kp F9 &kp F10 &kp F11  &kp F12  &none &ctrl_x   &ctrl_b   &ctrl_z &ctrl_y &none     &none    &none    &none     &none &kp C_PLAY_PAUSE
-	                         &kp LGUI &kp LALT &none &kp LSHFT &mo FUNC  &none   &none   &mo MOD   &kp RALT &kp RCTRL
+	&kp ESC   &kp F1 &kp F2  &kp F3   &kp F4   &none                                           &kp PG_UP &kp HOME &kp UP   &kp END   &none &kp C_PREVIOUS    
+	&kp TAB   &kp F5 &kp F6  &kp F7   &kp F8   &none                                           &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &none &kp C_NEXT
+	&kp LCTRL &kp F9 &kp F10 &kp F11  &kp F12  &none    &ctrl_x   &ctrl_b   &ctrl_z  &ctrl_y   &none     &none    &none    &none     &none &kp C_PLAY_PAUSE
+	                         &kp LGUI &kp LALT &mo FUNC &kp LSHFT &none     &kp LALT &kp RCTRL &mo MOD   &none    &none
 			>;
 			
 		};
 		func_mod_layer {
 			bindings = <
-	&none  &kp F13 &kp F14 &kp F15  &kp F16                          &none  &none  &none  &none &none &kp C_VOLUME_UP      
-	&none  &kp F17 &kp F18 &kp F19  &kp F20                          &none  &none  &none  &none &none &kp C_VOLUME_DOWN
-	&none  &kp F21 &kp F22 &kp F23  &kp F24 &none &none  &none &none &none  &none  &none  &none &none &kp C_MUTE
-	                   &none  &none  &none  &none &trans &none &none &trans &none &none
+	&none  &kp F13 &kp F14 &kp F15  &kp F16                          &none  &none &none &none &none &kp C_VOLUME_UP      
+	&none  &kp F17 &kp F18 &kp F19  &kp F20                          &none  &none &none &none &none &kp C_VOLUME_DOWN
+	&none  &kp F21 &kp F22 &kp F23  &kp F24 &none &none  &none &none &none  &none &none &none &none &kp C_MUTE
+	               &none   &none    &none   &none &trans &none &none &trans &none &none
 			>;
 		};
 	};
