@@ -103,7 +103,6 @@
 	&kp LCTRL &kp LU_X &kp LU_W &kp LU_F &kp LU_G &kp LU_V &ctrl_c   &ctrl_v  &kp HOME  &kp END   &kp LU_Z  &kp LU_DOT &kp LU_AG &kp LU_J &kp LU_K &kp RET
 	                            &kp LGUI &kp LALT &mo FUNC &kp LSHFT &mo NBR  &kp ENTER &kp SPACE &mo MOD   &kp RALT   &kp RCTRL
 			>;
-			
 		};
 		mod_layer {
 			bindings = <
@@ -112,7 +111,6 @@
 	&kp LU_TREMA  &kp LU_EURO    &kp LU_PIPE &kp LU_CC     &kp LU_LBRT  &kp LU_RBRT   &trans &trans &trans &trans &kp LU_QUESTION &kp LU_COLON &kp LU_SEMI  &kp LU_UNDER &kp LU_BACKSLASH &kp LU_CIRCUM
 	                                         &trans        &trans       &trans        &trans &trans &trans &trans &trans          &trans       &trans
 			>;
-			
 		};
 		nbr_layer {
 			bindings = <
@@ -121,7 +119,6 @@
 	&none  &none     &none     &none      &none      &none     &none &none &none  &none   &none     &kp LU_N1 &kp LU_N2 &kp LU_N3  &kp LU_ASTERISK &kp RET
 	                           &none      &none      &trans    &none &none &none  &none   &none     &kp LU_N0 &kp LU_DOT
     			>;
-			
 		};>
 		func_layer {
 			bindings = <
@@ -130,7 +127,6 @@
 	&kp LCTRL &kp F9 &kp F10 &kp F11  &kp F12  &none    &ctrl_x   &ctrl_b   &ctrl_z  &ctrl_y   &none     &none    &none    &none     &none &kp C_PLAY_PAUSE
 	                         &kp LGUI &kp LALT &mo FUNC &kp LSHFT &none     &kp LALT &kp RCTRL &mo MOD   &none    &none
 			>;
-			
 		};
 		func_mod_layer {
 			bindings = <
